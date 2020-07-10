@@ -1,0 +1,81 @@
+.choice-container {
+  display: flex;
+  margin-bottom: 0.8rem;
+  width: 100%;
+  font-size: 1.8rem;
+
+  border-radius: 10rem;
+}
+
+.choice-text:hover {
+  background-color: #fff !important;
+  transition: all .1s ease;
+}
+
+p#blue2.choice-text:hover {
+  color: #c0d7ff !important;
+}
+
+p#purple2.choice-text:hover {
+  color: #b9aaed !important;
+}
+
+p#green2.choice-text:hover {
+  color: #b5eba2 !important;
+}
+
+p#pink2.choice-text:hover {
+  color: #ffc4e1 !important;
+}
+.choice-prefix {
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding: 1.5rem 2.5rem;
+  color: white;
+}
+
+.choice-text {
+  width: 100%;
+  padding: 1.5rem;
+  color: white;
+}
+
+#blue {
+  background: #c0d7ff;
+  border: 0.1rem solid #c0d7ff;
+}
+
+#blue1 {
+  background-color: #c0d7ff;
+}
+
+#purple {
+  background: #b9aaed;
+  border: 0.1rem solid #b9aaed;
+}
+
+#purple1 {
+  background-color: #b9aaed;
+}
+
+#green {
+  background: #b5eba2;
+  border: 0.1rem solid #b5eba2;
+}
+
+#green1 {
+  background-color: #b5eba2;
+}
+
+#pink {
+  background: #ffc4e1;
+  border: 0.1rem solid #ffc4e1;
+}
+
+#pink1 {
+  background-color: #ffc4e1;
+}
+
+#question {
+  color: #f4cba2;
+}

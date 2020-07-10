@@ -5,6 +5,7 @@
   height: 100vh;
   position: fixed;
   transform: scaleX(-1);
+  z-index: -1;
 }
 
 #rightImage {
@@ -13,6 +14,7 @@
   right: 0;
   height: 100vh;
   position: fixed;
+  z-index: -1;
 }
 
 :root {
@@ -68,6 +70,7 @@ h3 {
   align-items: center;
   max-width: 80rem;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 .container > * {
@@ -126,3 +129,12 @@ h3 {
       height: 70%;
       padding-bottom: 5rem;
     }
+
+
+/*COMPATIBILITY*/
+@media only screen and (max-width: 1200px) {
+    #leftImage,
+    #rightImage {
+        display: none;
+    }
+}
