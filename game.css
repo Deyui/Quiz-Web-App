@@ -13,21 +13,22 @@
 }
 
 p#blue2.choice-text:hover {
-  color: #c0d7ff !important;
+  color: #c0d7ff;
 }
 
 p#purple2.choice-text:hover {
-  color: #b9aaed !important;
+  color: #b9aaed;
 }
 
 p#green2.choice-text:hover {
-  color: #b5eba2 !important;
+  color: #b5eba2;
 }
 
 p#pink2.choice-text:hover {
-  color: #ffc4e1 !important;
+  color: #ffc4e1;
 }
 .choice-prefix {
+  /*border-right: 0.2rem solid white;*/
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
   padding: 1.5rem 2.5rem;
@@ -38,6 +39,10 @@ p#pink2.choice-text:hover {
   width: 100%;
   padding: 1.5rem;
   color: white;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
 }
 
 #blue {
@@ -78,4 +83,12 @@ p#pink2.choice-text:hover {
 
 #question {
   color: #f4cba2;
+}
+
+.correct {
+  color: #b5ffb0 !important;
+}
+
+.incorrect {
+  color: #ff8597 !important;
 }
