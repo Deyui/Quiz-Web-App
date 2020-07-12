@@ -78,6 +78,7 @@ let questions = [
 //CONSTANTS
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
+var WRONG = 0;
 
 startGame = () => {
   questionCounter = 0;
@@ -88,9 +89,9 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-    if(availableQuestions.length == 0 || questionCounter >= MAX_QUESTIONS){
+    if(availableQuestions.length == 0 || WRONG >= 3){
       //go to end pages
-      return window.location.assign("end.html");
+      return window.location.assign("index.html");
     }
   questionCounter++;
   const questionIndex = Math.floor(Math.random() *availableQuestions.length);
@@ -125,6 +126,7 @@ choices.forEach(choice => {
     var element = document.getElementsByClassName("choice-text")[currentQuestion.answer-1];
 
     if(selectedAnswer != currentQuestion.answer) {
+      WRONG ++;
       element.classList.add("correct");
     }
 
