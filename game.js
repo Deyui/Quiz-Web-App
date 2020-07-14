@@ -89,7 +89,7 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-    if(availableQuestions.length == 0 || WRONG >= 3){
+    if(availableQuestions.length == 0 || WRONG >= 100){
       //go to end pages
       return window.location.assign("index.html");
     }
@@ -115,19 +115,34 @@ choices.forEach(choice => {
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedName = e.target.className;
-    console.log(selectedChoice)
-    console.log(selectedName)
+    const str1 = "divs";
     const selectedAnswer = selectedChoice.dataset["number"];
-    console.log(selectedAnswer)
+
 
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
     var element = document.getElementsByClassName("choice-text")[currentQuestion.answer-1];
+    var divs0 = document.getElementById("pink");
+    var divs1 = document.getElementById("blue");
+    var divs2 = document.getElementById("purple");
+    var divs3 = document.getElementById("green");
+    var divstwo = document.getElementsByClassName("choice-prefix");
+    var two = document.getElementsByClassName("choice-prefix")[currentQuestion.answer-1];
+
 
     if(selectedAnswer != currentQuestion.answer) {
       WRONG ++;
       element.classList.add("correct");
+      divs0.classList.add('newclass');
+      divs1.classList.add('newclass');
+      divs2.classList.add('newclass');
+      divs3.classList.add('newclass');
+      for (var i = 0; i < 4; i++){
+        divstwo[i].classList.add('newclass');
+      }
+      element.parentElement.classList.remove('newclass');
+      two.classList.remove('newclass');
     }
 
     selectedChoice.classList.add(classToApply);
@@ -135,8 +150,15 @@ choices.forEach(choice => {
     setTimeout( () => {
       selectedChoice.classList.remove(classToApply);
       element.classList.remove("correct");
+      divs0.classList.remove('newclass');
+      divs1.classList.remove('newclass');
+      divs2.classList.remove('newclass');
+      divs3.classList.remove('newclass');
+      for (var i = 0; i < 4; i++){
+        divstwo[i].classList.remove('newclass');
+      }
       getNewQuestion();
-    }, 1000);
+    }, 500);
   });
 });
 

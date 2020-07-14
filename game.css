@@ -86,27 +86,15 @@ p#pink2.choice-text:hover {
 }
 
 .correct {
-  color: #a8ffaa !important;
-  text-shadow:
-    -1px -1px 0 #5a695a,
-     0   -1px 0 #5a695a,
-     1px -1px 0 #5a695a,
-     1px  0   0 #5a695a,
-     1px  1px 0 #5a695a,
-     0    1px 0 #5a695a,
-    -1px  1px 0 #5a695a,
-    -1px  0   0 #5a695a;
+  color: #77b574 !important;
+
 }
 
 .incorrect {
   color: #ff8597 !important;
-  text-shadow:
-    -1px -1px 0 #695c5a,
-     0   -1px 0 #695c5a,
-     1px -1px 0 #695c5a,
-     1px  0   0 #695c5a,
-     1px  1px 0 #695c5a,
-     0    1px 0 #695c5a,
-    -1px  1px 0 #695c5a,
-    -1px  0   0 #695c5a;
+}
+
+.newclass {
+  border: 0.1rem solid #e0e0e0 !important;
+  background-color: #e0e0e0 !important;
 }
