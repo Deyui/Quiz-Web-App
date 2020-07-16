@@ -85,8 +85,7 @@ p#pink2.choice-text:hover {
   color: #f4cba2;
 }
 
-.correct {
-  color: #77b574 !important;
+
 
 }
 
@@ -97,4 +96,25 @@ p#pink2.choice-text:hover {
 .newclass {
   border: 0.1rem solid #e0e0e0 !important;
   background-color: #e0e0e0 !important;
+}
+
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}
+
+.hud-main-text {
+  font-family: 'Noto Sans JP', sans-serif;
 }

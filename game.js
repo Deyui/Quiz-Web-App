@@ -1,5 +1,7 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -17,8 +19,7 @@ let questions = [
         answer: 3,
     },
     {
-        question:
-            "Which of the following coffee or tea did not inspire a character name?",
+        question: "Which of the following coffee or tea did not inspire a character name?",
         choice1: "Jogmaya",
         choice2: "Columbian ",
         choice3: "Thé des Alizés",
@@ -73,6 +74,14 @@ let questions = [
         choice4: "23",
         answer: 3,
     },
+    {
+        question: "In S2 Ep 12, Cocoa's address can be seen in one of her letters. What is it referencing to?",
+        choice1: 'Kinema Citrus',
+        choice2: "White Fox",
+        choice3: 'Hobunsha',
+        choice4: "production doA",
+        answer: 2,
+    },
 ];
 
 //CONSTANTS
@@ -80,20 +89,48 @@ const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 var WRONG = 0;
 
+//TIMER
+const startingMinutes  = 5;
+var TIME = startingMinutes * 60;
+
+const countdownEl = document.getElementById('countdown');
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown() {
+  const minutes = Math.floor(TIME / 60);
+  let seconds = TIME % 60;
+
+  seconds = seconds < 10 ? '0' + seconds : seconds;
+
+  countdownEl.innerHTML = `${minutes}:${seconds}`;
+  TIME --;
+}
+
+function timeded() {
+  if(TIME <= -1){
+    return window.location.assign("index.html");
+  }
+}
+
 startGame = () => {
   questionCounter = 0;
   score = 0;
   availableQuestions = [...questions];
+  setInterval(timeded, 1000);
   getNewQuestion();
 };
 
 getNewQuestion = () => {
 
-    if(availableQuestions.length == 0 || WRONG >= 100){
+    if(WRONG >= 3){
       //go to end pages
       return window.location.assign("index.html");
     }
+
   questionCounter++;
+  questionCounterText.innerText = questionCounter;
+
   const questionIndex = Math.floor(Math.random() *availableQuestions.length);
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
