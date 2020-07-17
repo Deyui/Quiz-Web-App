@@ -9,82 +9,8 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
-let questions = [
-    {
-        question: "What is the name of the towns' mascot?",
-        choice1: 'Tippy',
-        choice2: 'Anko',
-        choice3: 'Kigumin',
-        choice4: 'Beatrice',
-        answer: 3,
-    },
-    {
-        question: "Which of the following coffee or tea did not inspire a character name?",
-        choice1: "Jogmaya",
-        choice2: "Columbian ",
-        choice3: "Thé des Alizés",
-        choice4: "Mandheling Coffee",
-        answer: 2,
-    },
-    {
-        question: "How many times was Sharo inebriated with coffee?",
-        choice1: "1 time",
-        choice2: "2 times",
-        choice3: "3 times",
-        choice4: "4 times",
-        answer: 4,
-    },
-    {
-        question: "What was the thing that Cocoa mistook as a lion on Chino's wood-carved photo frame?",
-        choice1: 'Sunflower',
-        choice2: 'Tiger',
-        choice3: 'Dandelions',
-        choice4: 'Sun',
-        answer: 3,
-    },
-    {
-        question: "How tall is Rize?",
-        choice1: '159 cm',
-        choice2: '160 cm',
-        choice3: '161 cm',
-        choice4: '163 cm',
-        answer: 2,
-    },
-    {
-        question: "Because of whom did Chiya start making strange menú names?",
-        choice1: 'Aoyama Blue Mountain',
-        choice2: "Chiya's Grandmother",
-        choice3: 'Kirima Syaro',
-        choice4: "Chino's Grandfather",
-        answer: 3,
-    },
-    {
-        question: "In the back cover of Volume 1, who is the character the 2nd from left?",
-        choice1: 'Cocoa',
-        choice2: "Chino",
-        choice3: 'Rize',
-        choice4: "Chiya",
-        answer: 3,
-    },
-    {
-        question: "In S1 Ep 4, what were Cocoa's score on her Japanese test?",
-        choice1: '32',
-        choice2: "7",
-        choice3: '18',
-        choice4: "23",
-        answer: 3,
-    },
-    {
-        question: "In S2 Ep 12, Cocoa's address can be seen in one of her letters. What is it referencing to?",
-        choice1: 'Kinema Citrus',
-        choice2: "White Fox",
-        choice3: 'Hobunsha',
-        choice4: "production doA",
-        answer: 2,
-    },
-];
-
 //CONSTANTS
+const TIME_BONUS = 15;
 const CORRECT_BONUS = 10;
 const MAX_QUESTIONS = 10;
 var WRONG = 0;
@@ -112,6 +38,20 @@ function timeded() {
     return window.location.assign("index.html");
   }
 }
+
+//NEEDEDTIMEFORQUESTION
+var NEEDEDTIME = 0;
+setInterval(updateNeededTime, 1000);
+
+function updateNeededTime() {
+  NEEDEDTIME ++;
+}
+
+function pls() {
+  console.log(NEEDEDTIME);
+}
+
+setInterval(pls, 1000);
 
 startGame = () => {
   questionCounter = 0;
@@ -159,6 +99,13 @@ choices.forEach(choice => {
     const classToApply =
       selectedAnswer == currentQuestion.answer ? "correct" : "incorrect";
 
+      if(classToApply == "correct" && NEEDEDTIME < 5) {
+        incrementScore(TIME_BONUS);
+      }
+      else if(classToApply == "correct") {
+        incrementScore(CORRECT_BONUS);
+      }
+
     var element = document.getElementsByClassName("choice-text")[currentQuestion.answer-1];
     var divs0 = document.getElementById("pink");
     var divs1 = document.getElementById("blue");
@@ -195,8 +142,14 @@ choices.forEach(choice => {
         divstwo[i].classList.remove('newclass');
       }
       getNewQuestion();
+      NEEDEDTIME = 0;
     }, 500);
   });
 });
+
+incrementScore = num => {
+  score += num;
+  scoreText.innerText = score;
+}
 
 startGame();
