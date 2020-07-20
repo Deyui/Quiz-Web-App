@@ -35,7 +35,7 @@ function updateCountdown() {
 
 function timeded() {
   if(TIME <= -1){
-    return window.location.assign("index.html");
+    return window.location.assign("end.html");
   }
 }
 
@@ -63,9 +63,10 @@ startGame = () => {
 
 getNewQuestion = () => {
 
-    if(WRONG >= 3){
+    if(availableQuestions.length == 0 || WRONG >= 3){
+      localStorage.setItem('mostRecentScore', score);
       //go to end pages
-      return window.location.assign("index.html");
+      return window.location.assign("end.html");
     }
 
   questionCounter++;
