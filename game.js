@@ -9,6 +9,21 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
 
+
+let questions = [];
+
+fetch('questions.json')
+    .then((res) => {
+        return res.json();
+    })
+    .then((loadedQuestions) => {
+        questions = loadedQuestions;
+        startGame();
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+
 //CONSTANTS
 const TIME_BONUS = 15;
 const CORRECT_BONUS = 10;
@@ -152,5 +167,3 @@ incrementScore = num => {
   score += num;
   scoreText.innerText = score;
 }
-
-startGame();
