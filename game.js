@@ -31,7 +31,7 @@ const MAX_QUESTIONS = 10;
 var WRONG = 0;
 
 //TIMER
-const startingMinutes  = 5;
+const startingMinutes  = 0.3;
 var TIME = startingMinutes * 60;
 
 const countdownEl = document.getElementById('countdown');

@@ -72,6 +72,15 @@
     "answer": 3
   },
   {
+    "question": "In what order did the characters first appear in the Anime at ANY time?",
+    "difficulty": "hard",
+    "choice1": "Cocoa > Chino > Tippy > Rize > Chiya & Syaro > Maya > Megu",
+    "choice2": "Cocoa > Chino & Tippy > Rize > Chiya > Syaro",
+    "choice3": "Cocoa > Aoyama > Chino & Tippy > Maya > Megu > Chiya & Syaro",
+    "choice4": "Cocoa > Aoyama > Chino & Tippy > Megu > Maya > Syaro > Chiya",
+    "answer": 3
+  },
+  {
     "question": "In S2 Ep 12, Cocoa's address can be seen in one of her letters. What is it referencing to?",
     "difficulty": "medium",
     "choice1": "Kinema Citrus",

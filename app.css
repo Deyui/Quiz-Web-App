@@ -130,6 +130,20 @@ h3 {
       padding-bottom: 5rem;
     }
 
+    .inactive {
+      width: 20rem;
+      text-align: center;
+      text-decoration: none;
+      margin-bottom: .5rem;
+      padding: .75rem 3rem;
+      border: 0.1rem solid;
+      border-radius: 10rem;
+      color: #fff;
+      background-size: 200% 100%;
+      font-size: 1.8rem;
+      background: #a38b83;
+    }
+
 
 /* FORMS */
 form {
