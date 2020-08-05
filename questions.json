@@ -81,6 +81,24 @@
     "answer": 3
   },
   {
+    "question": "Which character does Uchida Maaya voice?",
+    "difficulty": "easy",
+    "choice1": "Kirima Syaro",
+    "choice2": "Jouga Maya",
+    "choice3": "Megu's mom",
+    "choice4": "Chiya Ujimatsu",
+    "answer": 1
+  },
+  {
+    "question": "What is Cocoa's bike called?",
+    "difficulty": "easy",
+    "choice1": "Kigumin",
+    "choice2": "Wild Geese",
+    "choice3": "Tippy",
+    "choice4": "Hoto Bike",
+    "answer": 3
+  },
+  {
     "question": "In S2 Ep 12, Cocoa's address can be seen in one of her letters. What is it referencing to?",
     "difficulty": "medium",
     "choice1": "Kinema Citrus",
