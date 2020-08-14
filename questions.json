@@ -99,6 +99,42 @@
     "answer": 3
   },
   {
+    "question": "What type of rabbit is Tippy?",
+    "difficulty": "easy",
+    "choice1": "Cinnamon",
+    "choice2": "Angora",
+    "choice3": "Kigumin",
+    "choice4": "Tippy",
+    "answer": 2
+  },
+  {
+    "question": "What was the badminton technique called, that Rize taught Chino?",
+    "difficulty": "easy",
+    "choice1": "Jumping serve",
+    "choice2": "Rabbit sevrve",
+    "choice3": "Patriot serve",
+    "choice4": "Coffee serve",
+    "answer": 3
+  },
+  {
+    "question": "From who did Chino receive a present at the Christmas gift exchange?",
+    "difficulty": "medium",
+    "choice1": "Megu",
+    "choice2": "Cocoa",
+    "choice3": "Maya",
+    "choice4": "Chiya",
+    "answer": 3
+  },
+  {
+    "question": "What scene did 'Dear My Sister' leave out from the manga?",
+    "difficulty": "medium",
+    "choice1": "Chiya & Syaro go shopping.",
+    "choice2": "Everyone is making a stuffed rabbit.",
+    "choice3": "Cocoa's mother goes to get medicine.",
+    "choice4": "Cocoa & Chiya forgot to do their homework.",
+    "answer": 4
+  },
+  {
     "question": "In S2 Ep 12, Cocoa's address can be seen in one of her letters. What is it referencing to?",
     "difficulty": "medium",
     "choice1": "Kinema Citrus",
