@@ -50,6 +50,7 @@ function updateCountdown() {
 
 function timeded() {
   if(TIME <= -1){
+	localStorage.setItem('mostRecentScore', score);
     return window.location.assign("end.html");
   }
 }
